@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ERROR 1: Root element name is Hotel instead of Hotels -->
+<Hotel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:noNamespaceSchemaLocation="Hotels.xsd">
+  
+  <!-- Sample hotel from assignment -->
+  <Hotel Rating="4.2">
+    <Name>Westin</Name>
+    <Phone>480-968-8885</Phone>
+    <Phone>800-937-8461</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>11</Number>
+      <Street>E 7th St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+  
+  <!-- ERROR 2: Missing required attribute NearestAirport -->
+  <Hotel Rating="4.5">
+    <Name>Marriott Downtown Phoenix</Name>
+    <Phone>602-333-0000</Phone>
+    <Phone>800-228-9290</Phone>
+    <Address>
+      <Number>50</Number>
+      <Street>E Adams St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
+    </Address>
+  </Hotel>
+  
+  <!-- ERROR 3: Missing Phone element -->
+  <Hotel>
+    <Name>Hilton Garden Inn Scottsdale</Name>
+    <Address NearestAirport="Sky Harbor">
+      <Number>7324</Number>
+      <Street>E Indian School Rd</Street>
+      <City>Scottsdale</City>
+      <State>AZ</State>
+      <Zip>85251</Zip>
+    </Address>
+  </Hotel>
+  
+  <!-- ERROR 4: Missing closing tag for Address element -->
+  <Hotel Rating="4.8">
+    <Name>Four Seasons Resort Scottsdale</Name>
+    <Phone>480-515-5700</Phone>
+    <Phone>800-819-5053</Phone>
+    <Phone>480-515-5701</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>10600</Number>
+      <Street>E Crescent Moon Dr</Street>
+      <City>Scottsdale</City>
+      <State>AZ</State>
+      <Zip>85262</Zip>
+    <!-- Missing </Address> closing tag -->
+  </Hotel>
+  
+  <!-- ERROR 5: Two names provided for one hotel -->
+  <Hotel Rating="3.9">
+    <Name>Hampton Inn Phoenix Airport</Name>
+    <Name>Hampton Inn Airport Phoenix</Name>
+    <Phone>602-273-7778</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>4234</Number>
+      <Street>S 48th St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85040</Zip>
+    </Address>
+  </Hotel>
+
+</Hotel>
